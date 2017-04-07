@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="helloWorld">
+  <head>
+    <meta charset="utf-8">
+    <title>Hello World</title>
+    <script src="angular.js"></script>
+
+    <script>
+
+      // Criando um modulo
+      angular.module("helloWorld",[]);
+
+      angular.module("helloWorld").controller("helloWorldCtrl", function($scope){
+        $scope.message = "Hello World!";
+      });
+    </script>
+  </head>
+  <body>
+
+    <!-- A view é o local onde estiver colocado o atributo ng-controller -->
+    <div ng-controller="helloWorldCtrl">
+      {{message}}
+    </div>
+
+  </body>
+</html>
